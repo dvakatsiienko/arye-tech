@@ -6,9 +6,9 @@ export const Hero = () => {
   return (
     <section className='pt-[140px] pb-20 px-10 w-full'>
       <div className='max-w-[1200px] mx-auto'>
-        <div className='grid grid-cols-2 gap-[60px] items-center min-h-screen w-full'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-[60px] items-center min-h-screen w-full'>
           {/* Hero Content */}
-          <div className='hero-content w-full'>
+          <div className='hero-content w-full lg:col-span-5'>
             <h1 className='text-[48px] leading-[1.2] font-bold mb-5 bg-gradient-to-br from-zinc-900 to-zinc-600 bg-clip-text text-transparent'>
               RCC-1
               <br />
@@ -53,36 +53,43 @@ export const Hero = () => {
               <div className='text-4xl font-bold mb-5'>$399 USD</div>
 
               <div className='flex gap-5 mb-5'>
-                <button className='flex-1 bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-[15px] px-[30px] rounded-lg border border-zinc-900 shadow-sm transition-all duration-300 hover:-translate-y-0.5 text-lg'>
+                <button
+                  className='flex-1 bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-[15px] px-[30px] rounded-lg border border-zinc-900 shadow-sm transition-all duration-300 hover:-translate-y-0.5 text-lg'
+                  type='button'>
                   Order Now →
                 </button>
-                <button className='flex-1 bg-transparent border-2 border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50 text-foreground py-[15px] px-[30px] rounded-lg transition-all duration-300 text-lg'>
+                <button
+                  className='flex-1 bg-transparent border-2 border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50 text-foreground py-[15px] px-[30px] rounded-lg transition-all duration-300 text-lg'
+                  type='button'>
                   Learn More
                 </button>
               </div>
 
               <div className='text-sm text-zinc-600 mt-[10px]'>
-                🚀 Shipping starts January 2025 • Free worldwide shipping on
+                🚀 Shipping starts September 2025 • Free worldwide shipping on
                 orders over $200
               </div>
             </div>
           </div>
 
           {/* Hero Image */}
-          <div className='hero-image relative p-10 w-full'>
-            <div className='relative'>
-              <div className='absolute -top-[10px] -right-[10px] bg-foreground text-white px-[15px] py-[5px] rounded-[20px] text-xs font-bold z-10'>
-                In Production
+          <div className='hero-image relative w-full lg:col-span-7'>
+            <div className='rounded-2xl border border-zinc-200 bg-white shadow-sm overflow-hidden'>
+              <div className='px-4 py-2 border-b border-zinc-200 text-xs text-zinc-600 flex items-center justify-between'>
+                <span>Arye RCC-1</span>
+                <span className='inline-flex items-center rounded-full bg-zinc-900 text-white px-2.5 py-0.5 text-[10px]'>
+                  In Production
+                </span>
               </div>
-
-              <div className='w-[70%] max-w-[280px] h-[400px] mx-auto bg-gradient-to-br from-zinc-100 to-zinc-200 rounded-[45%_45%_45%_45%_/_70%_70%_30%_30%] flex items-center justify-center shadow-[0_20px_60px_rgba(0,0,0,0.08)] relative'>
+              <div className='relative w-full bg-zinc-50'>
                 <Image
-                  alt='ARYE RCC-1 Gaming Mouse'
-                  className='rounded-lg object-cover'
-                  height={200}
-                  priority
-                  src='/arye-1.jpg'
-                  width={200}
+                  alt='ARYE RCC-1 light-gray wireframe blueprint'
+                  className='w-full h-auto'
+                  height={1440}
+                  priority={false}
+                  sizes='(min-width: 1024px) 720px, 100vw'
+                  src='/arye-2.jpg'
+                  width={2048}
                 />
               </div>
             </div>
