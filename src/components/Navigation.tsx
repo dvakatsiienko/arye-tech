@@ -33,7 +33,7 @@ export default function Navigation() {
           <li>
             <a
               href='#buy'
-              className='text-primary font-medium hover:text-green-400 transition-colors duration-300 no-underline'>
+              className='text-white font-medium px-3 py-1.5 rounded-md border border-zinc-900 bg-zinc-900 hover:bg-zinc-800 transition-colors duration-300 no-underline shadow-sm'>
               Buy Now
             </a>
           </li>

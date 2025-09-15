@@ -2,8 +2,8 @@
 
 :root {
   /* Base colors */
-  --background: #0a0a0a;
-  --foreground: #ffffff;
+  --background: #f7f7f8; /* light magnesium white */
+  --foreground: #0e0f11; /* near-black graphite */
 
   /* Zinc scale */
   --zinc-50: #fafafa;
@@ -24,27 +24,27 @@
   --green-600: #16a34a;
 
   /* Semantic colors */
-  --primary: var(--green-500);
-  --primary-hover: var(--green-600);
-  --secondary: var(--zinc-700);
-  --secondary-hover: var(--zinc-600);
+  --primary: var(--zinc-900);
+  --primary-hover: var(--zinc-800);
+  --secondary: var(--zinc-600);
+  --secondary-hover: var(--zinc-800);
 
   /* UI colors */
-  --border: var(--zinc-800);
-  --border-hover: var(--zinc-700);
-  --card: var(--zinc-900);
-  --card-hover: var(--zinc-800);
-  --muted: var(--zinc-400);
-  --muted-dark: var(--zinc-500);
+  --border: var(--zinc-200);
+  --border-hover: var(--zinc-300);
+  --card: #ffffff;
+  --card-hover: var(--zinc-50);
+  --muted: var(--zinc-600);
+  --muted-dark: var(--zinc-700);
 
   /* Navigation colors */
-  --nav-bg: rgba(9, 9, 11, 0.95);
-  --nav-border: var(--zinc-800);
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --nav-border: var(--zinc-200);
 
   /* Scrollbar colors */
-  --scrollbar-track: var(--zinc-900);
-  --scrollbar-thumb: var(--zinc-700);
-  --scrollbar-thumb-hover: var(--zinc-600);
+  --scrollbar-track: var(--zinc-100);
+  --scrollbar-thumb: var(--zinc-300);
+  --scrollbar-thumb-hover: var(--zinc-400);
 }
 
 @theme inline {
@@ -80,4 +80,17 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb-hover);
+}
+
+::selection {
+  background: var(--zinc-700);
+  color: var(--zinc-50);
+}
+
+button, img {
+  user-select: none;
+}
+
+button, a {
+  cursor: pointer;
 }

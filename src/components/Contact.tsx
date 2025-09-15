@@ -29,18 +29,18 @@ export default function Contact() {
   return (
     <section id='contact' className='py-20 px-6 md:px-10'>
       <div className='max-w-2xl mx-auto text-center'>
-        <h2 className='text-3xl md:text-4xl font-bold mb-6'>
+        <h2 className='text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-br from-zinc-900 to-zinc-600 bg-clip-text text-transparent'>
           Questions? Get in Touch
         </h2>
 
-        <p className='text-lg text-zinc-400 mb-10'>
+        <p className='text-lg text-zinc-600 mb-10'>
           Have questions about RCC-1 or need bulk orders? We&apos;re here to
           help.
         </p>
 
         <form onSubmit={handleSubmit} className='space-y-6 text-left'>
           <div>
-            <label htmlFor='name' className='block text-sm text-zinc-400 mb-2'>
+            <label htmlFor='name' className='block text-sm text-zinc-600 mb-2'>
               Name
             </label>
             <input
@@ -51,12 +51,12 @@ export default function Contact() {
               onChange={handleInputChange}
               placeholder='Your name'
               required
-              className='w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500 transition-colors duration-300'
+              className='w-full px-4 py-3 bg-white border border-zinc-200 rounded-lg text-foreground placeholder-zinc-400 focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 transition-colors duration-300'
             />
           </div>
 
           <div>
-            <label htmlFor='email' className='block text-sm text-zinc-400 mb-2'>
+            <label htmlFor='email' className='block text-sm text-zinc-600 mb-2'>
               Email
             </label>
             <input
@@ -67,14 +67,14 @@ export default function Contact() {
               onChange={handleInputChange}
               placeholder='your@email.com'
               required
-              className='w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500 transition-colors duration-300'
+              className='w-full px-4 py-3 bg-white border border-zinc-200 rounded-lg text-foreground placeholder-zinc-400 focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 transition-colors duration-300'
             />
           </div>
 
           <div>
             <label
               htmlFor='message'
-              className='block text-sm text-zinc-400 mb-2'>
+              className='block text-sm text-zinc-600 mb-2'>
               Message
             </label>
             <textarea
@@ -85,13 +85,13 @@ export default function Contact() {
               placeholder='How can we help?'
               rows={4}
               required
-              className='w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500 transition-colors duration-300 resize-vertical'
+              className='w-full px-4 py-3 bg-white border border-zinc-200 rounded-lg text-foreground placeholder-zinc-400 focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 transition-colors duration-300 resize-vertical'
             />
           </div>
 
           <button
             type='submit'
-            className='w-full bg-green-500 hover:bg-green-600 text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 text-lg'>
+            className='w-full bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-4 px-8 rounded-lg border border-zinc-900 shadow-sm transition-all duration-300 hover:-translate-y-1 text-lg'>
             Send Message
           </button>
         </form>
