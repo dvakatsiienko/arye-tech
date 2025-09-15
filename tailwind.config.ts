@@ -6,11 +6,41 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  plugins: [],
   theme: {
     extend: {
       colors: {
         background: 'var(--background)',
+        border: {
+          DEFAULT: 'var(--border)',
+          hover: 'var(--border-hover)',
+        },
+        card: {
+          DEFAULT: 'var(--card)',
+          hover: 'var(--card-hover)',
+        },
         foreground: 'var(--foreground)',
+        green: {
+          400: 'var(--green-400)',
+          500: 'var(--green-500)',
+          600: 'var(--green-600)',
+        },
+        muted: {
+          DEFAULT: 'var(--muted)',
+          dark: 'var(--muted-dark)',
+        },
+        nav: {
+          bg: 'var(--nav-bg)',
+          border: 'var(--nav-border)',
+        },
+        primary: {
+          DEFAULT: 'var(--primary)',
+          hover: 'var(--primary-hover)',
+        },
+        secondary: {
+          DEFAULT: 'var(--secondary)',
+          hover: 'var(--secondary-hover)',
+        },
         zinc: {
           50: 'var(--zinc-50)',
           100: 'var(--zinc-100)',
@@ -24,39 +54,9 @@ const config: Config = {
           900: 'var(--zinc-900)',
           950: 'var(--zinc-950)',
         },
-        green: {
-          400: 'var(--green-400)',
-          500: 'var(--green-500)',
-          600: 'var(--green-600)',
-        },
-        primary: {
-          DEFAULT: 'var(--primary)',
-          hover: 'var(--primary-hover)',
-        },
-        secondary: {
-          DEFAULT: 'var(--secondary)',
-          hover: 'var(--secondary-hover)',
-        },
-        border: {
-          DEFAULT: 'var(--border)',
-          hover: 'var(--border-hover)',
-        },
-        card: {
-          DEFAULT: 'var(--card)',
-          hover: 'var(--card-hover)',
-        },
-        muted: {
-          DEFAULT: 'var(--muted)',
-          dark: 'var(--muted-dark)',
-        },
-        nav: {
-          bg: 'var(--nav-bg)',
-          border: 'var(--nav-border)',
-        },
       },
     },
   },
-  plugins: [],
 };
 
 export default config;

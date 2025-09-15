@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-export default function Hero() {
+export const Hero = () => {
   return (
     <section className='pt-[140px] pb-20 px-10 w-full'>
       <div className='max-w-[1200px] mx-auto'>
@@ -91,4 +91,4 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};

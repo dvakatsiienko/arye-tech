@@ -1,7 +1,7 @@
-import Contact from '@/components/Contact';
+import { Contact } from '@/components/Contact';
 import { Features } from '@/components/Features';
-import Hero from '@/components/Hero';
-import StickyBuyBar from '@/components/StickyBuyBar';
+import { Hero } from '@/components/Hero';
+import { StickyBuyBar } from '@/components/StickyBuyBar';
 
 export default function Home() {
   return (

@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navigation from '@/components/Navigation';
+
+import { Navigation } from '@/components/Navigation';
 
 const inter = Inter({
-  variable: '--font-inter',
   subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
-  title: 'ARYE RCC-1 - Revolutionary Gaming Mouse',
   description:
     "The world's most advanced gaming mouse. 46 grams of pure innovation.",
+  title: 'ARYE RCC-1 - Revolutionary Gaming Mouse',
 };
 
 export default function RootLayout({

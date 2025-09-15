@@ -1,8 +1,6 @@
 'use client';
 
-import React from 'react';
-
-export default function StickyBuyBar() {
+export const StickyBuyBar = () => {
   return (
     <div className='fixed bottom-0 left-0 right-0 z-[999] bg-white/90 backdrop-blur-[10px] border-t border-zinc-200 px-10 py-5'>
       <div className='max-w-[1200px] mx-auto w-full flex items-center justify-between'>
@@ -29,4 +27,4 @@ export default function StickyBuyBar() {
       </div>
     </div>
   );
-}
+};

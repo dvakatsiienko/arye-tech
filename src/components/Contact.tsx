@@ -1,13 +1,12 @@
 'use client';
 
-import type React from 'react';
 import { useState } from 'react';
 
-export default function Contact() {
+export const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     message: '',
+    name: '',
   });
 
   const handleInputChange = (
@@ -23,11 +22,11 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ email: '', message: '', name: '' });
   };
 
   return (
-    <section id='contact' className='py-20 px-6 md:px-10'>
+    <section className='py-20 px-6 md:px-10' id='contact'>
       <div className='max-w-2xl mx-auto text-center'>
         <h2 className='text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-br from-zinc-900 to-zinc-600 bg-clip-text text-transparent'>
           Questions? Get in Touch
@@ -38,64 +37,64 @@ export default function Contact() {
           help.
         </p>
 
-        <form onSubmit={handleSubmit} className='space-y-6 text-left'>
+        <form className='space-y-6 text-left' onSubmit={handleSubmit}>
           <div>
-            <label htmlFor='name' className='block text-sm text-zinc-600 mb-2'>
+            <label className='block text-sm text-zinc-600 mb-2' htmlFor='name'>
               Name
             </label>
             <input
-              type='text'
+              className='w-full px-4 py-3 bg-white border border-zinc-200 rounded-lg text-foreground placeholder-zinc-400 focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 transition-colors duration-300'
               id='name'
               name='name'
-              value={formData.name}
               onChange={handleInputChange}
               placeholder='Your name'
               required
-              className='w-full px-4 py-3 bg-white border border-zinc-200 rounded-lg text-foreground placeholder-zinc-400 focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 transition-colors duration-300'
+              type='text'
+              value={formData.name}
             />
           </div>
 
           <div>
-            <label htmlFor='email' className='block text-sm text-zinc-600 mb-2'>
+            <label className='block text-sm text-zinc-600 mb-2' htmlFor='email'>
               Email
             </label>
             <input
-              type='email'
+              className='w-full px-4 py-3 bg-white border border-zinc-200 rounded-lg text-foreground placeholder-zinc-400 focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 transition-colors duration-300'
               id='email'
               name='email'
-              value={formData.email}
               onChange={handleInputChange}
               placeholder='your@email.com'
               required
-              className='w-full px-4 py-3 bg-white border border-zinc-200 rounded-lg text-foreground placeholder-zinc-400 focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 transition-colors duration-300'
+              type='email'
+              value={formData.email}
             />
           </div>
 
           <div>
             <label
-              htmlFor='message'
-              className='block text-sm text-zinc-600 mb-2'>
+              className='block text-sm text-zinc-600 mb-2'
+              htmlFor='message'>
               Message
             </label>
             <textarea
+              className='w-full px-4 py-3 bg-white border border-zinc-200 rounded-lg text-foreground placeholder-zinc-400 focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 transition-colors duration-300 resize-vertical'
               id='message'
               name='message'
-              value={formData.message}
               onChange={handleInputChange}
               placeholder='How can we help?'
-              rows={4}
               required
-              className='w-full px-4 py-3 bg-white border border-zinc-200 rounded-lg text-foreground placeholder-zinc-400 focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900 transition-colors duration-300 resize-vertical'
+              rows={4}
+              value={formData.message}
             />
           </div>
 
           <button
-            type='submit'
-            className='w-full bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-4 px-8 rounded-lg border border-zinc-900 shadow-sm transition-all duration-300 hover:-translate-y-1 text-lg'>
+            className='w-full bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-4 px-8 rounded-lg border border-zinc-900 shadow-sm transition-all duration-300 hover:-translate-y-1 text-lg'
+            type='submit'>
             Send Message
           </button>
         </form>
       </div>
     </section>
   );
-}
+};
