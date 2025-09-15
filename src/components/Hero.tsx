@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 
+import { redirectToCheckout } from '@/lib/checkout';
+
 export const Hero = () => {
   return (
     <section className='pt-[140px] pb-20 px-10 w-full'>
@@ -55,6 +57,7 @@ export const Hero = () => {
               <div className='flex gap-5 mb-5'>
                 <button
                   className='flex-1 bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-[15px] px-[30px] rounded-lg border border-zinc-900 shadow-sm transition-all duration-300 hover:-translate-y-0.5 text-lg'
+                  onClick={redirectToCheckout}
                   type='button'>
                   Order Now →
                 </button>

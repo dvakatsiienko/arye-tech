@@ -1,5 +1,7 @@
 'use client';
 
+import { redirectToCheckout } from '@/lib/checkout';
+
 export const Navigation = () => {
   return (
     <header className='fixed top-0 left-0 right-0 z-[1000] px-10 py-5 bg-nav-bg backdrop-blur-[10px] border-b border-[var(--nav-border)]'>
@@ -36,11 +38,12 @@ export const Navigation = () => {
             </a>
           </li>
           <li>
-            <a
+            <button
               className='text-white font-medium px-3 py-1.5 rounded-md border border-zinc-900 bg-zinc-900 hover:bg-zinc-800 transition-colors duration-300 no-underline shadow-sm'
-              href='#buy'>
+              onClick={redirectToCheckout}
+              type='button'>
               Buy Now
-            </a>
+            </button>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,7 @@
 'use client';
 
+import { redirectToCheckout } from '@/lib/checkout';
+
 export const StickyBuyBar = () => {
   return (
     <div className='fixed bottom-0 left-0 right-0 z-[999] bg-white/90 backdrop-blur-[10px] border-t border-zinc-200 px-10 py-5'>
@@ -20,7 +22,10 @@ export const StickyBuyBar = () => {
         {/* Price and Buy Button */}
         <div className='flex items-center gap-[15px]'>
           <span className='text-2xl font-bold'>$399</span>
-          <button className='bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-3 px-6 rounded-lg border border-zinc-900 shadow-sm transition-all duration-300 hover:-translate-y-0.5 m-0'>
+          <button
+            className='bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-3 px-6 rounded-lg border border-zinc-900 shadow-sm transition-all duration-300 hover:-translate-y-0.5 m-0'
+            onClick={redirectToCheckout}
+            type='button'>
             Buy Now
           </button>
         </div>
