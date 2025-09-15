@@ -72,24 +72,18 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className='hero-image relative w-full lg:col-span-7'>
-            <div className='rounded-2xl border border-zinc-200 bg-white shadow-sm overflow-hidden'>
-              <div className='px-4 py-2 border-b border-zinc-200 text-xs text-zinc-600 flex items-center justify-between'>
-                <span>Arye RCC-1</span>
-                <span className='inline-flex items-center rounded-full bg-zinc-900 text-white px-2.5 py-0.5 text-[10px]'>
-                  In Production
-                </span>
-              </div>
-              <div className='relative w-full bg-zinc-50'>
+          {/* Hero Visuals */}
+          <div className='hero-image relative w-full lg:col-span-7 lg:mt-[10px]'>
+            <div className='flex flex-col gap-4'>
+              <div className='relative w-full rounded-2xl overflow-hidden border border-zinc-200 bg-white shadow-sm'>
                 <Image
-                  alt='ARYE RCC-1 light-gray wireframe blueprint'
-                  className='w-full h-auto'
-                  height={1440}
+                  alt='ARYE RCC-1 mouse photo'
+                  className='w-full h-auto object-contain'
+                  height={900}
                   priority={false}
                   sizes='(min-width: 1024px) 720px, 100vw'
-                  src='/arye-2.jpg'
-                  width={2048}
+                  src='/arye-6.webp'
+                  width={1440}
                 />
               </div>
             </div>

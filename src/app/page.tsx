@@ -2,6 +2,7 @@ import { Blueprint } from '@/components/Blueprint';
 import { Contact } from '@/components/Contact';
 import { Features } from '@/components/Features';
 import { Hero } from '@/components/Hero';
+import { ProgressFooter } from '@/components/ProgressFooter';
 import { StickyBuyBar } from '@/components/StickyBuyBar';
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Blueprint />
       <Features />
       <Contact />
+      <ProgressFooter />
       <StickyBuyBar />
     </main>
   );

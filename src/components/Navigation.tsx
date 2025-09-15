@@ -17,6 +17,13 @@ export const Navigation = () => {
           <li>
             <a
               className='text-muted hover:text-foreground transition-colors duration-300 no-underline'
+              href='#blueprint'>
+              Blueprint
+            </a>
+          </li>
+          <li>
+            <a
+              className='text-muted hover:text-foreground transition-colors duration-300 no-underline'
               href='#features'>
               Features
             </a>
