@@ -73,24 +73,24 @@ export const Hero = () => {
 
         {/* Hero Footer - Compact Payment Section */}
         <div className='mt-12'>
-          <div className='bg-white p-4 rounded-lg border border-zinc-200 shadow-sm'>
-            <div className='flex flex-col sm:flex-row items-center justify-between gap-4'>
-              <div className='flex items-center gap-3'>
+          <div className='bg-white p-6 rounded-lg border border-zinc-200 shadow-sm'>
+            <div className='flex flex-col sm:flex-row items-center justify-between gap-6'>
+              <div className='flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left'>
                 <div className='text-2xl font-bold'>$399 USD</div>
-                <div className='text-xs text-zinc-600'>
+                <div className='text-sm text-zinc-600'>
                   🚀 Shipping September 2025
                 </div>
               </div>
 
-              <div className='flex gap-2'>
+              <div className='flex flex-col sm:flex-row gap-3 w-full sm:w-auto'>
                 <button
-                  className='bg-zinc-900 hover:bg-zinc-800 text-white font-medium py-2 px-4 rounded-md shadow-sm transition-all duration-300 hover:-translate-y-0.5 text-sm'
+                  className='bg-zinc-900 hover:bg-zinc-800 text-white font-medium py-3 px-6 rounded-md shadow-sm transition-all duration-300 hover:-translate-y-0.5 text-sm w-full sm:w-auto'
                   onClick={redirectToCheckout}
                   type='button'>
                   Order Now →
                 </button>
                 <button
-                  className='bg-transparent border border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50 text-foreground py-2 px-4 rounded-md transition-all duration-300 text-sm'
+                  className='bg-transparent border border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50 text-foreground py-3 px-6 rounded-md transition-all duration-300 text-sm w-full sm:w-auto'
                   type='button'>
                   Learn More
                 </button>
