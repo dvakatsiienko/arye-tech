@@ -15,10 +15,15 @@
   },
   "dependencies": {
     "@stripe/stripe-js": "7.9.0",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.544.0",
+    "motion": "12.23.12",
     "next": "15.5.3",
     "react": "19.1.1",
     "react-dom": "19.1.1",
-    "stripe": "18.5.0"
+    "stripe": "18.5.0",
+    "tailwind-merge": "3.3.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
@@ -28,6 +33,7 @@
     "@types/react-dom": "19.1.9",
     "biome-config-polished": "0.0.2",
     "tailwindcss": "4.1.13",
+    "tw-animate-css": "1.3.8",
     "typescript": "5.9.2"
   }
 }

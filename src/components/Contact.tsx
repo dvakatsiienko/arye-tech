@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 
+import { SectionHeading } from './SectionHeading';
+
 export const Contact = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -27,10 +29,8 @@ export const Contact = () => {
 
   return (
     <section className='py-20 px-6 md:px-10' id='contact'>
-      <div className='max-w-2xl mx-auto text-center'>
-        <h2 className='text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-br from-zinc-900 to-zinc-600 bg-clip-text text-transparent'>
-          Questions? Get in Touch
-        </h2>
+      <div className='max-w-2xl mx-auto'>
+        <SectionHeading text='Questions? Get in Touch' />
 
         <p className='text-lg text-zinc-600 mb-10'>
           Have questions about RCC-1 or need bulk orders? We&apos;re here to
