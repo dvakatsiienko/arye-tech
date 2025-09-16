@@ -8,7 +8,9 @@ import { BlueprintFrame } from './BlueprintFrame';
 
 export const Hero = () => {
   return (
-    <section className='pt-[140px] pb-20 px-10 w-full min-h-screen' id='hero'>
+    <section
+      className='grid pt-[140px] pb-20 px-10 w-full min-h-screen'
+      id='hero'>
       <div className='max-w-[1200px] mx-auto'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-[60px] items-start w-full'>
           {/* Hero Content */}
@@ -72,7 +74,7 @@ export const Hero = () => {
         </div>
 
         {/* Hero Footer - Compact Payment Section */}
-        <div className='mt-12'>
+        <div className='mt-12 grid auto-rows-min content-end'>
           <div className='bg-white p-6 rounded-lg border border-zinc-200 shadow-sm'>
             <div className='flex flex-col sm:flex-row items-center justify-between gap-6'>
               <div className='flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left'>
