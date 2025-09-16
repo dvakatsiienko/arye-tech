@@ -1,5 +1,6 @@
 import { Blueprint } from '@/components/Blueprint';
 import { Contact } from '@/components/Contact';
+import { Design } from '@/components/Design';
 import { Features } from '@/components/Features';
 import { Hero } from '@/components/Hero';
 import { ProgressFooter } from '@/components/ProgressFooter';
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Blueprint />
       <Features />
+      <Design />
       <Contact />
       <ProgressFooter />
       <StickyBuyBar />

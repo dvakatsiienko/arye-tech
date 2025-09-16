@@ -37,6 +37,13 @@ export const Navigation = () => {
           <li>
             <a
               className='text-zinc-800 hover:text-foreground transition-colors duration-300 no-underline'
+              href='#design'>
+              Design
+            </a>
+          </li>
+          <li>
+            <a
+              className='text-zinc-800 hover:text-foreground transition-colors duration-300 no-underline'
               href='#contact'>
               Contact
             </a>
