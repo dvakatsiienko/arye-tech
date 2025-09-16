@@ -1,18 +1,51 @@
 'use client';
 
+import { useState } from 'react';
+import { useScrollLock } from 'usehooks-ts';
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
+
 import { redirectToCheckout } from '@/lib/checkout';
 
 export const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Lock background scrolling when mobile menu is open
+  const { lock, unlock } = useScrollLock({
+    autoLock: false,
+  });
+
+  const handlePopoverChange = (open: boolean) => {
+    setIsOpen(open);
+    if (open) lock();
+    if (!open) unlock();
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    handlePopoverChange(false); // Properly close and unlock scroll
+  };
+
   return (
-    <header className='fixed top-0 left-0 right-0 z-[1000] px-10 py-5 bg-nav-bg backdrop-blur-[10px] border-b border-[var(--nav-border)]'>
+    <header className='fixed top-0 left-0 right-0 z-[1000] px-4 sm:px-10 py-5 bg-nav-bg backdrop-blur-[10px] border-b border-[var(--nav-border)]'>
       <nav className='max-w-[1200px] mx-auto flex items-center justify-between'>
+        {/* Logo */}
         <button
           className='cursor-pointer group bg-transparent border-none p-0'
           onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}
           type='button'>
           <Logo />
         </button>
-        <ul className='flex items-center gap-[30px] list-none text-sm'>
+
+        {/* Desktop Navigation */}
+        <ul className='hidden lg:flex items-center gap-[30px] list-none text-sm'>
           <li>
             <a
               className='text-zinc-800 hover:text-foreground transition-colors duration-300 no-underline'
@@ -57,6 +90,60 @@ export const Navigation = () => {
             </button>
           </li>
         </ul>
+
+        {/* Mobile Navigation */}
+        <div className='flex lg:hidden items-center gap-3'>
+          {/* Mobile Buy Button */}
+          <button
+            className='text-white font-medium px-3 py-1.5 rounded-md border border-zinc-900 bg-zinc-900 hover:bg-zinc-800 transition-colors duration-300 text-sm'
+            onClick={redirectToCheckout}
+            type='button'>
+            Buy Now
+          </button>
+
+          {/* Burger Menu */}
+          <Popover onOpenChange={handlePopoverChange} open={isOpen}>
+            <PopoverTrigger asChild>
+              <button
+                className='p-2 hover:bg-zinc-100 rounded-md transition-colors duration-200'
+                type='button'>
+                <BurgerIcon />
+              </button>
+            </PopoverTrigger>
+            <PopoverContent
+              align='end'
+              avoidCollisions
+              className='w-screen h-screen bg-white border-none shadow-none rounded-none'
+              collisionPadding={0}
+              side='bottom'
+              sideOffset={0}>
+              <div className='flex flex-col h-full pt-20 pb-10 px-6'>
+                <div className='flex-1 flex flex-col justify-center space-y-8'>
+                  <NavLink
+                    onClick={() => scrollToSection('hero')}
+                    text='Specs'
+                  />
+                  <NavLink
+                    onClick={() => scrollToSection('blueprint')}
+                    text='Blueprint'
+                  />
+                  <NavLink
+                    onClick={() => scrollToSection('features')}
+                    text='Features'
+                  />
+                  <NavLink
+                    onClick={() => scrollToSection('design')}
+                    text='Design'
+                  />
+                  <NavLink
+                    onClick={() => scrollToSection('contact')}
+                    text='Contact'
+                  />
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
+        </div>
       </nav>
     </header>
   );
@@ -195,6 +282,45 @@ const Logo = (props: { size?: number }) => {
     </svg>
   );
 };
+
+const BurgerIcon = () => (
+  <svg
+    fill='none'
+    height='20'
+    stroke='currentColor'
+    strokeWidth='2'
+    viewBox='0 0 24 24'
+    width='20'>
+    <line x1='3' x2='21' y1='6' y2='6'></line>
+    <line x1='3' x2='21' y1='12' y2='12'></line>
+    <line x1='3' x2='21' y1='18' y2='18'></line>
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg
+    fill='none'
+    height='24'
+    stroke='currentColor'
+    strokeWidth='2'
+    viewBox='0 0 24 24'
+    width='24'>
+    <line x1='18' x2='6' y1='6' y2='18'></line>
+    <line x1='6' x2='18' y1='6' y2='18'></line>
+  </svg>
+);
+
+const NavLink: React.FC<{ text: string; onClick: () => void }> = ({
+  text,
+  onClick,
+}) => (
+  <button
+    className='text-4xl font-bold text-zinc-900 hover:text-zinc-700 transition-colors duration-300 text-left w-full'
+    onClick={onClick}
+    type='button'>
+    {text}
+  </button>
+);
 
 /* Types */
 declare module 'react' {

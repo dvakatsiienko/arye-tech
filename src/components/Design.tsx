@@ -12,7 +12,7 @@ export const Design = () => {
       <div className='max-w-6xl mx-auto'>
         <SectionHeading text='Design' />
 
-        <BlueprintFrame subtitle='Component Layout' title='ARYE RCC-1'>
+        <BlueprintFrame subtitle='High Quality Materials' title='ARYE RCC-1'>
           <Image
             alt='ARYE RCC-1 internal component layout'
             className='w-full h-auto object-contain'
